@@ -6,7 +6,7 @@ export default DS.Model.extend({
   image: DS.attr('string'),
   location: DS.attr('string'),
   description: DS.attr('string'),
-  timestamp: DS.attr('date'),
+  timestamp: DS.attr('number'),
   quantity: DS.attr('number'),
   category: DS.attr('string'),
   tag: DS.attr('string')

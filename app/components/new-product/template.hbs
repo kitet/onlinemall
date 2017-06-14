@@ -27,4 +27,7 @@
 {{else}}
 	<button id='button' class='btn btn-success' {{action 'showNewProductForm'}}>New Product</button>
 {{/if}}
+{{#if showalert}}
+	<p class='text-success'>Successfully saved</p>
+{{/if}}
 {{yield}}

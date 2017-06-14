@@ -1,10 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+	showalert:false,
 	showNewProductForm: false,
 	actions:{
 		showNewProductForm(){
 			this.set('showNewProductForm', true);
+			this.set('showalert', false);
 		},
 		cancelProduct(){
 			//this.transitionTo('index');
@@ -22,7 +24,17 @@ export default Ember.Component.extend({
 				quantity: this.get('quantity'),
 				timestamp: new Date().getTime()
 			}
+			this.set('title','');
+			this.set('description','');
+			this.set('price','');
+			this.set('tag','');
+			this.set('location','');
+			this.set('category','');
+			this.set('image','');
+			this.set('quantity','');
 			this.sendAction('saveNewProduct', productobj);	
+			this.set('showalert', true);
+			this.set('showNewProductForm', false);
 		}
 	}
 });

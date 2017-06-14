@@ -5,8 +5,16 @@ export default Ember.Route.extend({
 		cancelProduct(){
 			this.transitionTo('index');
 		},
-		saveNewProduct(){
-			alert('action up done');		
+		saveNewProduct(productobj){
+			//alert('action up done');	
+			var newproduct=this.store.createRecord('product',productobj);
+			newproduct.save();	
+			// newproduct.save().then(function(){
+			// 	console.log('product saved successfully');
+			// 	this.transitionTo('admin/product');
+			// }).catch(function(){
+			// 	console.log('product failed to save');
+			// });
 		}
 	}
 });

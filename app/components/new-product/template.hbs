@@ -1,0 +1,30 @@
+{{#if showNewProductForm}}
+	<div  class='row'>
+		<div class='col-md-7'>
+			<form class='form-group'>
+				<label>Title: </label>
+				{{input class='form-control' id='title' value=title}}
+				<label>Description: </label>
+				{{textarea class='form-control' id='description' value=description}}
+				<label>Category: </label>
+				{{input class='form-control' id='category' value=category}}
+				<label>Tags: </label>
+				{{input class='form-control' id='tag' value=tag}}		
+				<label>Price: </label>
+				{{input class='form-control' id='price' value=price}}		
+				<label>Image: </label>
+				{{input class='form-control' id='image' value=image}}	
+				<label>Quantity: </label>
+				{{input class='form-control' id='quantity' value=quantity}}		
+				<label>Location: </label>
+				{{input class='form-control' id='location' value=location}}
+				<button id='button' class='btn btn-success' {{action 'saveNewProduct'}}>Save Product</button>
+				<button id='button' class='btn' {{action 'cancelProduct'}}>Cancel</button>
+			</form>
+		</div>
+	</div>
+
+{{else}}
+	<button id='button' class='btn btn-success' {{action 'showNewProductForm'}}>New Product</button>
+{{/if}}
+{{yield}}

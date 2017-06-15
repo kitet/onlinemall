@@ -5,3 +5,11 @@
 .row{
 	margin: 50px;
 }
+
+#right-product{
+	float: left;
+}
+
+#left-product{
+	float: left;
+}

@@ -1,8 +1,14 @@
-<ul>
-{{#each model as |product|}}
-{{product.title}}
-{{/each}}
-</ul>
-
-
+	{{#each list as |product|}}
+	<div id='item' class="row">
+			<div class="col-sm-4">
+				<div id='left-product'>
+					<h2>{{product.title}}</h2>
+					<img src={{product.image}} alt={{product.title}}>
+				</div>
+				<div id='right-product'>
+					{{product.description}}
+				</div>
+			</div>
+	</div>
+	{{/each}}
 {{yield}}
